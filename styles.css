@@ -1,0 +1,418 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #f4f1ea;
+    color: #252525;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+
+    font-size: 42px;
+    letter-spacing: 1px;
+
+    color: #252525;
+}
+
+header p {
+    margin: 0;
+
+    color: #77706a;
+    font-size: 17px;
+}
+
+
+/* ================================
+   Main Container
+================================ */
+
+main {
+    width: 100%;
+    max-width: 800px;
+
+    background: #fffdf8;
+
+    border: 1px solid #d8d1c7;
+    border-radius: 4px;
+
+    padding: 35px;
+
+    box-shadow: 8px 8px 0 #d8d1c7;
+}
+
+
+/* ================================
+   Time Selection
+================================ */
+
+#timeSelection {
+    margin-bottom: 25px;
+}
+
+#timeSelection label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #77706a;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#timeLimit {
+    width: 100%;
+
+    padding: 12px;
+
+    background: #fffdf8;
+    color: #252525;
+
+    border: 2px solid #c9c1b7;
+    border-radius: 4px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+#timeLimit:focus {
+    border-color: #b45309;
+}
+
+#timeLimit:disabled {
+    background: #ebe7df;
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   Test Information
+================================ */
+
+#testInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border: 1px solid #d8d1c7;
+
+    margin-bottom: 30px;
+}
+
+#testInfo div {
+    text-align: center;
+
+    padding: 18px 10px;
+
+    border-right: 1px solid #d8d1c7;
+}
+
+#testInfo div:last-child {
+    border-right: none;
+}
+
+#testInfo span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #77706a;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#testInfo strong {
+    font-size: 25px;
+
+    color: #b45309;
+}
+
+
+/* ================================
+   Typing Test
+================================ */
+
+#typingTest {
+    margin-bottom: 25px;
+}
+
+
+/* Text to Type */
+
+#textToType {
+    min-height: 150px;
+
+    margin: 0 0 15px;
+    padding: 20px;
+
+    background: #f4f1ea;
+
+    border-left: 4px solid #b45309;
+
+    color: #aaa29a;
+
+    font-size: 20px;
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Individual Characters */
+
+#textToType span {
+    position: relative;
+}
+
+#textToType span.correct {
+    color: #252525;
+}
+
+#textToType span.incorrect {
+    color: #dc2626;
+
+    text-decoration: underline;
+}
+
+#textToType span.current {
+    border-left: 2px solid #b45309;
+}
+
+
+/* ================================
+   Typing Input
+================================ */
+
+#typingInput {
+    width: 100%;
+
+    min-height: 180px;
+
+    resize: vertical;
+
+    padding: 18px;
+
+    background: #fffdf8;
+    color: #252525;
+
+    border: 2px solid #c9c1b7;
+    border-radius: 4px;
+
+    outline: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#typingInput:focus {
+    border-color: #b45309;
+}
+
+#typingInput:disabled {
+    background: #ebe7df;
+
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   Controls
+================================ */
+
+#controls {
+    display: flex;
+
+    gap: 12px;
+}
+
+#controls button {
+    flex: 1;
+
+    padding: 13px 20px;
+
+    border: 1px solid #252525;
+    border-radius: 4px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Start Button */
+
+#startButton {
+    background: #252525;
+    color: #fffdf8;
+}
+
+#startButton:hover {
+    background: #b45309;
+    border-color: #b45309;
+}
+
+#startButton:disabled {
+    background: #77706a;
+    border-color: #77706a;
+
+    cursor: not-allowed;
+}
+
+
+/* Reset Button */
+
+#resetButton {
+    background: #fffdf8;
+    color: #252525;
+}
+
+#resetButton:hover {
+    background: #ebe7df;
+}
+
+
+/* ================================
+   Result
+================================ */
+
+#result {
+    display: none;
+
+    margin-top: 30px;
+    padding: 25px;
+
+    border-top: 2px solid #b45309;
+
+    background: #f4f1ea;
+}
+
+#result h2 {
+    margin: 0 0 15px;
+
+    font-size: 22px;
+}
+
+#result p {
+    margin: 8px 0;
+
+    color: #77706a;
+}
+
+#result strong {
+    color: #252525;
+
+    font-size: 18px;
+}
+
+
+/* ================================
+   Mobile Responsive Design
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+
+    header {
+        margin-bottom: 25px;
+    }
+
+
+    header h1 {
+        font-size: 32px;
+    }
+
+
+    header p {
+        font-size: 15px;
+    }
+
+
+    main {
+        padding: 20px;
+
+        box-shadow: 5px 5px 0 #d8d1c7;
+    }
+
+
+    /* Test information becomes vertical */
+
+    #testInfo {
+        grid-template-columns: 1fr;
+    }
+
+    #testInfo div {
+        border-right: none;
+
+        border-bottom: 1px solid #d8d1c7;
+    }
+
+    #testInfo div:last-child {
+        border-bottom: none;
+    }
+
+
+    /* Controls become vertical */
+
+    #controls {
+        flex-direction: column;
+    }
+
+
+    /* Typing text */
+
+    #textToType {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+
+    /* Typing input */
+
+    #typingInput {
+        min-height: 160px;
+
+        font-size: 16px;
+    }
+}

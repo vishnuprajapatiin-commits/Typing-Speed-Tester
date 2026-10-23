@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Tester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Typing Speed Tester</h1>
+        <p>Test your typing speed and accuracy.</p>
+    </header>
+
+    <main>
+
+        <!-- Test Duration -->
+        <section id="timeSelection">
+
+            <label for="timeLimit">Test Duration</label>
+
+            <select id="timeLimit">
+                <option value="30">30 Seconds</option>
+                <option value="60" selected>60 Seconds</option>
+                <option value="90">90 Seconds</option>
+                <option value="300">5 Minutes</option>
+            </select>
+
+        </section>
+
+
+        <!-- Test Information -->
+        <section id="testInfo">
+
+            <div>
+                <span>Time</span>
+                <strong id="timer">60</strong>
+            </div>
+
+            <div>
+                <span>WPM</span>
+                <strong id="wpm">0</strong>
+            </div>
+
+            <div>
+                <span>Accuracy</span>
+                <strong id="accuracy">0%</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Typing Area -->
+        <section id="typingTest">
+
+            <p id="textToType"></p>
+
+            <textarea
+                id="typingInput"
+                placeholder="Start typing here..."
+                disabled
+                spellcheck="false"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+            ></textarea>
+
+        </section>
+
+
+        <!-- Controls -->
+        <div id="controls">
+
+            <button type="button" id="startButton">
+                Start Test
+            </button>
+
+            <button type="button" id="resetButton">
+                Reset
+            </button>
+
+        </div>
+
+
+        <!-- Result -->
+        <section id="result">
+
+            <h2>Test Result</h2>
+
+            <p>
+                Words Per Minute:
+                <strong id="finalWpm">0</strong>
+            </p>
+
+            <p>
+                Accuracy:
+                <strong id="finalAccuracy">0%</strong>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
